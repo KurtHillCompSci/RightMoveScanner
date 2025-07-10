@@ -7,7 +7,7 @@ import webbrowser
 def get_latest_property_id(rightmove_url):
     html = urlopen(rightmove_url).read()
     soup = BeautifulSoup(html, features="html.parser")
-    return soup.find_all("a", {"class": "propertyCard-priceLink"})[1]['href'][12:-18]
+    return soup.find_all("a", {"class": "propertyCard-link"})[1]['href'][12:-18]
 
 def main():
     counter = 0
